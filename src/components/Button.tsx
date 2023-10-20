@@ -9,7 +9,7 @@ export const Button: React.FC<Props> = ({ children, active, ...rest}) => {
   const activeStyle = 'text-slate-100 bg-slate-500'
   const desactiveStyle = 'text-slate-500'
     
-  return <button {...rest} className={`rounded-full px-2 ${active ? activeStyle : desactiveStyle}` }>
+  return <button {...rest} className={`max-h-8 rounded-full px-2 ${active ? activeStyle : desactiveStyle}` }>
       {children}</button>
   
  }

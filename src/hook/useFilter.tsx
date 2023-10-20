@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import { FilterState, type IFilterState } from '../const' 
+import { FilterState, IFilterState } from '../const' 
+import { IsetFilter } from '../types'
 
 export const useFilter = () => {
   const [filter, setStateFilter] = useState<IFilterState>(FilterState.active)
-  const setFilter = (filter:IFilterState)=> setStateFilter(filter)
+  const setFilter:IsetFilter = (filter)=> setStateFilter(filter)
   return {filter, setFilter}
 }

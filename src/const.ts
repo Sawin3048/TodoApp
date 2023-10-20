@@ -1,7 +1,7 @@
 export const FilterState = {
-  complete :'Completed',
+  all :'All',
   active :'Active',
-  all :'All'
+  complete :'Completed'
 } as const
 
 export type IFilterState = typeof FilterState[keyof typeof FilterState] 
