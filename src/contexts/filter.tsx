@@ -1,10 +1,10 @@
-import { SetStateAction, createContext, useContext } from "react"
-import { IRenderState } from "../const"
+import { createContext, useContext } from "react"
+import { IFilterState } from "../const"
 import { useFilter } from "../hook/useFilter"
+import { IsetFilter } from "../types"
 
-const {filter, setFilter} = useFilter()
-const FilterContext = createContext<IRenderState | null>(null)
-const SetFilterContext = createContext<React.Dispatch<SetStateAction<IRenderState>>>(setFilter)
+const FilterContext = createContext<IFilterState | null>(null)
+const SetFilterContext = createContext<IsetFilter| null>(null)
 
 export const Filter = () => {
   return useContext(FilterContext)
@@ -15,6 +15,8 @@ export const SetFilter = () => {
 }
 
 export const FilterProvider = ({ children }: { children: React.ReactNode }) => {
+  const {filter, setFilter} = useFilter()
+  
   return (
   <FilterContext.Provider value={filter}>
     <SetFilterContext.Provider value={setFilter}>

@@ -1,9 +1,9 @@
-export const RenderState = {
+export const FilterState = {
   complete :'Completed',
   active :'Active',
   all :'All'
 } as const
 
-export type IRenderState = typeof RenderState[keyof typeof RenderState] 
+export type IFilterState = typeof FilterState[keyof typeof FilterState] 
 // const a:values = 'Active' 
-export const RenderStatesAsArray = Object.values(RenderState)  
+export const FilterStateAsArray = Object.values(FilterState)  
