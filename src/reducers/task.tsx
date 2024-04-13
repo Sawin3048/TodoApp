@@ -10,7 +10,7 @@ type ActionType =
   | { type: 'toggle'; payload: { id: ID } }
 
 function tasksReducer(tasks: Todo[], action: ActionType) {
-  console.log(tasks)
+  // console.log(tasks)
   switch (action.type) {
     case 'added': {
       const newTasks = [
