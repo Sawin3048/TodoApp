@@ -20,6 +20,8 @@ export const Task: React.FC<TodoType> = ({ id, completed, title }) => {
   return (
     <li className={`justify-between items-center flex border-b px-3 py-1 gap-3 ${stylesClass.li}`}>
       <input
+        aria-label='Complete task'
+        title='Complete'
         className='rounded-full peer relative appearance-none shrink-0 w-6 h-6 border-2 border-green-200   bg-white
         focus:outline-none focus:ring-offset-0 focus:ring-1 focus:ring-blue-100
         checked:bg-green-500 checked:border-0
@@ -27,7 +29,8 @@ export const Task: React.FC<TodoType> = ({ id, completed, title }) => {
         type='checkbox'
         checked={completed}
         onChange={() => controller?.toggle(id)}
-      />
+        />
+       
       <svg
         className=' absolute w-6 h-6 pointer-events-none hidden peer-checked:block stroke-white p-1 outline-none'
         xmlns='http://www.w3.org/2000/svg'
@@ -41,7 +44,13 @@ export const Task: React.FC<TodoType> = ({ id, completed, title }) => {
         <polyline points='20 6 9 17 4 12'></polyline>
       </svg>
       <span className={`w-full overflow-hidden break-words ${stylesClass.p}`}>{title}</span>
-      <button className='col-span-1 place-self-center text-red-500' onClick={() => controller?.deleted(id)}>
+
+        <button
+        className='col-span-1 place-self-center text-red-500 focus:outline-black focus:outline-8'
+          onClick={() => controller?.deleted(id)}
+          aria-label='Delete task'
+          title='Delete'
+        >
         <Trash color='#ef4444' />
       </button>
     </li>

@@ -25,7 +25,6 @@ export const TaskAdder = () => {
         autoFocus
         placeholder='What needs to be done'
       />
-      <button></button>
     </form>
   )
 }

@@ -10,14 +10,15 @@ const RenderController = () => {
 
   return (
     <div className='flex gap-1'>
-      {FilterStateAsArray.map(f => {
+      {FilterStateAsArray.map(filterName => {
         return (
           <Button
-            onClick={setFilter ? ()=> setFilter(f) as MouseEventHandler : undefined}
-            active={f === selectedFilter}
-            key={f}
+            onClick={setFilter ? () => setFilter(filterName) as MouseEventHandler : undefined}
+            active={filterName === selectedFilter}
+            key={filterName}
+            disabled={filterName === selectedFilter}
           >
-            {f}
+            {filterName}
           </Button>
         )
       })}
