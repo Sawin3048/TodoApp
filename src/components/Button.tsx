@@ -1,3 +1,4 @@
+import clsx from "clsx"
 import React from "react"
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -6,10 +7,10 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button: React.FC<Props> = ({ children, active, ...rest}) => { 
-  const activeStyle = 'text-white bg-slate-500'
-  const desactiveStyle = 'text-slate-500'
-    
-  return <button {...rest} className={`max-h-8 rounded-full px-2 ${active ? activeStyle : desactiveStyle}` }>
+  return <button {...rest} className={clsx('max-h-8 rounded-full px-2',
+    {
+    'text-white bg-slate-500': active,
+    'text-slate-500': !active
+  })}>
       {children}</button>
-  
- }
+}

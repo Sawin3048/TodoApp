@@ -1,3 +1,4 @@
+import Notepath from '../assets/notepath'
 import { FilterState } from '../const'
 import { Filter } from '../contexts/filter'
 import { useTasks } from '../contexts/task'
@@ -14,9 +15,13 @@ export const TaskList = () => {
   else if (filter === FilterState.complete) {
     tasksToRender = tasks.filter(task => task.completed)
   }
-
+console.log(tasks)
   return (
-    <ul className='todo-list'>
+    (tasksToRender.length <= 0) ?
+    <div className='p-5 text-zinc-300'>
+      <Notepath className='m-auto w-fit max-w-xs max-h-80 sm:max-h-96 md:max-h-full'/>
+    </div>
+    : <ul>
       {tasksToRender.map(todo => (
         <Task key={todo.id} {...todo} />
       ))}
