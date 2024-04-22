@@ -24,6 +24,15 @@
      
     }
   ],
+  "screenshots" : [
+    {
+      "src": "/screenshot1.webp",
+      "sizes": "750x1334",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "Homescreen of App"
+    }
+  ],  
   "display": "fullscreen",
   "background_color": "#fef08a",
   "theme_color":"#fef08a",
