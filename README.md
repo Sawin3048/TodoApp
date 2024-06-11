@@ -1,12 +1,19 @@
-# React + TypeScript + Vite
+# Todo App
 
-My fist time using **react** with **typescript**
+Clasic task manager with **modern UI**
 
-For styles i use: `todomvc-app-css`
+You can visit on: <a target="_blank">https://sawin.xyz<a/> 
+
+<img src="./public/screenshot2.webp"/>
 
 <br/>
 
 ### Proyect Scripts
+<h5>Install dependencies</h5>
+
+```
+  npm install
+```
 
 <h5>Run dev mode</h5>
 
@@ -22,7 +29,7 @@ For styles i use: `todomvc-app-css`
 
 <h5>Preview mode</h5>
 
-> Needs to be built first in order to be able to see it
+> It needs to be built first to be seen.
 
 ```
   npm run preview
@@ -30,8 +37,3 @@ For styles i use: `todomvc-app-css`
 
 <br/>
 
-### I hope to be to:
-
-- Type the app
-- Perform basic tests any day
-- And synchronize with GitHub
