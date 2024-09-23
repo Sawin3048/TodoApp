@@ -3,11 +3,11 @@ import { ViewConteiner } from './components/ViewConteiner'
 import { FilterProvider } from './contexts/filter'
 import { TaskContextProvider } from './contexts/task'
 
-function App() {
+function App () {
   return (
     <Background>
       <TaskContextProvider>
-        <FilterProvider>          
+        <FilterProvider>
           <ViewConteiner />
         </FilterProvider>
       </TaskContextProvider>

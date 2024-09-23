@@ -11,17 +11,15 @@ export const TaskList = () => {
   let tasksToRender = tasks
   if (filter === FilterState.active) {
     tasksToRender = tasks.filter(task => !task.completed)
-  }
-  else if (filter === FilterState.complete) {
+  } else if (filter === FilterState.complete) {
     tasksToRender = tasks.filter(task => task.completed)
   }
-console.log(tasks)
   return (
-    (tasksToRender.length <= 0) ?
-    <div className='p-5 text-zinc-300'>
+    (tasksToRender.length <= 0)
+      ? <div className='p-5 text-zinc-300'>
       <Notepath className='m-auto w-fit max-w-xs max-h-80 sm:max-h-96 md:max-h-full'/>
     </div>
-    : <ul>
+      : <ul>
       {tasksToRender.map(todo => (
         <Task key={todo.id} {...todo} />
       ))}
